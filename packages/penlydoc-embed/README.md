@@ -7,6 +7,9 @@ Show the [PenlyDoc](https://penlydoc.com) signing page inside your web app. The 
 npm install penlydoc-embed
 ```
 
+Not on npm yet: until it is, copy `index.js` and `index.d.ts` into your project, or use the plain script tag
+`<script src="https://penlydoc.com/embed.js"></script>` (see [`html`](../../html)).
+
 ```js
 import { mount } from 'penlydoc-embed';
 

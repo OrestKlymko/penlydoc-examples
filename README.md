@@ -10,7 +10,7 @@ signing page and HMAC-signed webhooks. Free during early access, embedding inclu
 | [`php`](php) | Signing link endpoint and webhook handler in plain PHP |
 | [`react`](react), [`vue`](vue) | A `SignContract` component for each |
 | [`html`](html) | The smallest page that shows the signing frame |
-| [`packages/penlydoc-embed`](packages/penlydoc-embed) | npm package: loads `embed.js` and mounts the frame, with TypeScript types |
+| [`packages/penlydoc-embed`](packages/penlydoc-embed) | Package (npm release coming): loads `embed.js` and mounts the frame, with TypeScript types |
 
 For AI assistants there is a Model Context Protocol server: [penlydoc-mcp](https://github.com/OrestKlymko/penlydoc-mcp).
 

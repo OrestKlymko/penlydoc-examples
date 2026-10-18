@@ -13,7 +13,7 @@ PenlyDoc must reach your webhook, so expose port 3000 with any HTTPS tunnel and 
 ```bash
 npm install
 PENLY_API_KEY=sk_… SITE_URL=https://your-tunnel.example npm run setup
-npm start            # open the SITE_URL (or http://localhost:3000)
+npm start            # open the SITE_URL: only that address is allowed to show the signing page
 ```
 
 `setup.mjs` sets your branding and the allowed website, the webhook URL, and uploads the lease template.
