@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Rentals · Tenant portal</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="bar">
+  <strong class="brand">Northwind Rentals</strong>
+  <span class="muted">Tenant portal (demo)</span>
+  <label class="me">Signed in as <input id="me" type="email" value="anna@example.com" aria-label="Signed-in user e-mail"></label>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h2>New lease <span class="muted">(staff)</span></h2>
+    <form id="newLease" class="grid">
+      <label>Tenant name <input name="name" value="Anna Becker" required></label>
+      <label>Tenant e-mail <input name="email" type="email" value="anna@example.com" required></label>
+      <label>Property <input name="address" value="Flat 4, 18 Mill Lane, Riverton" required></label>
+      <label>Monthly rent <input name="rent" value="1 250 EUR" required></label>
+      <label>Start date <input name="startDate" value="1 November 2026" required></label>
+      <label>Language <select name="language"><option>en</option><option>sk</option><option>cs</option><option>uk</option><option>fr</option></select></label>
+      <label>Landlord e-mail (signs by e-mail) <input name="landlordEmail" type="email" value="landlord@northwind.example"></label>
+      <div class="end"><button class="primary">Send lease</button></div>
+    </form>
+    <p id="newErr" class="err" role="alert"></p>
+  </section>
+
+  <section class="card">
+    <h2>Leases</h2>
+    <table><thead><tr><th>Lease</th><th>Tenant</th><th>Status</th><th></th></tr></thead><tbody id="list"></tbody></table>
+  </section>
+
+  <section class="card" id="signCard" hidden>
+    <h2 id="signTitle">Sign your lease</h2>
+    <div class="row opts">
+      <label>Language <select id="optLang"><option value="">tenant's</option><option>en</option><option>sk</option><option>cs</option><option>uk</option><option>fr</option></select></label>
+      <label class="check"><input type="checkbox" id="optHeader" checked> Hide PenlyDoc title bar</label>
+      <label class="check"><input type="checkbox" id="optLangs"> Hide language picker</label>
+      <label class="check"><input type="checkbox" id="optAccentOn"> Own colour <input type="color" id="optAccent" value="#b45309" aria-label="Accent colour"></label>
+      <button id="remount" type="button">Apply</button>
+      <button id="close" type="button">Close</button>
+    </div>
+    <p id="signMsg" class="note" role="status"></p>
+    <div id="sign"></div>
+    <h3>Browser events</h3>
+    <ul id="events" class="log"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Webhooks received <span class="muted">(signature checked on the raw body)</span></h2>
+    <ul id="hooks" class="log"></ul>
+  </section>
+</main>
+
+<script src="PENLY_URL/embed.js"></script>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

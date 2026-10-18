@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lease · Northwind Rentals</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="bar"><strong class="brand">Northwind Rentals</strong><span class="muted">Tenant portal (demo)</span></header>
+<main class="wrap">
+  <section class="card">
+    <h2 id="title">Back from PenlyDoc</h2>
+    <p id="text"></p>
+    <p class="muted" id="raw"></p>
+    <a class="btn primary" href="/">Back to your leases</a>
+  </section>
+</main>
+<script type="module">
+  const q = new URLSearchParams(location.search);
+  const event = q.get('penly_event'), status = q.get('penly_status');
+  document.getElementById('title').textContent = event === 'completed' ? 'Thank you, your lease is signed' : event === 'declined' ? 'You declined the lease' : 'Back from PenlyDoc';
+  document.getElementById('text').textContent = event === 'completed'
+    ? (status === 'COMPLETED' ? 'Everyone has signed. The signed PDF is in your leases.' : 'We are waiting for the landlord to counter-sign.')
+    : event === 'declined' ? 'We will get in touch to talk it through.' : '';
+  document.getElementById('raw').textContent = `lease=${q.get('lease')} penly_event=${event} penly_status=${status}`;
+</script>
+</body>
+</html>

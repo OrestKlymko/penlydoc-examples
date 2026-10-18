@@ -1,0 +1,15 @@
+{
+  "name": "penlydoc-embed",
+  "version": "0.1.0",
+  "description": "Show the PenlyDoc e-signature page inside your web app: loads embed.js from PenlyDoc and mounts the signing frame, with TypeScript types.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": { ".": { "types": "./index.d.ts", "default": "./index.js" } },
+  "files": ["index.js", "index.d.ts", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "keywords": ["e-signature", "electronic-signature", "embedded-signing", "esign", "pdf", "penlydoc"],
+  "homepage": "https://penlydoc.com/docs/embed",
+  "repository": { "type": "git", "url": "git+https://github.com/OrestKlymko/penlydoc-examples.git", "directory": "packages/penlydoc-embed" },
+  "license": "MIT"
+}

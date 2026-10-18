@@ -1,0 +1,13 @@
+{
+  "name": "penlydoc-embed-demo",
+  "private": true,
+  "type": "module",
+  "description": "Northwind Rentals: a small tenant portal that embeds PenlyDoc signing, end to end.",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
