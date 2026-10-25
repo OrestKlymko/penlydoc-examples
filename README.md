@@ -3,6 +3,8 @@
 Working examples for [PenlyDoc](https://penlydoc.com), an e-signature service from the EU with a REST API, an embeddable
 signing page and HMAC-signed webhooks. Free during early access, embedding included.
 
+To run them you need an API key: [create an organisation](https://penlydoc.com/console#/signup?src=utm_source%3Dgithub%20utm_campaign%3Dexamples) (free, no card), then **Console → Developers**.
+
 | Folder | What it shows |
 |---|---|
 | [`northwind-portal`](northwind-portal) | A complete Node.js tenant portal: template with roles and data, the tenant signs inside the portal, the landlord by e-mail, webhooks, full-page mode, signed PDF saved automatically |
